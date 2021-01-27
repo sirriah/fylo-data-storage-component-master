@@ -15,24 +15,26 @@
 </head>
 <body>
   <main>
+    <h1 class="sr-text">Fylo Data Storage Component</h1>
     <div class="component flex">
-      <div class="component__menu">
+      <div class="component__column menu">
         <img class="component__logo" src="images/logo.svg" alt="Fylo logo">
-        <div class="component__icons">
+        <div class="component__icons flex">
           <a href="#" class="icon-item">
             <span class="sr-text">New document</span>
-            <img src="images/icon-document.svg" alt="document icon"></a>
+            <img class="icon-pic" src="images/icon-document.svg" alt="document icon">
+          </a>
           <a href="#" class="icon-item">
             <span class="sr-text">New folder</span>
-            <img src="images/icon-folder.svg" alt="new folder icon">
+            <img class="icon-pic" src="images/icon-folder.svg" alt="new folder icon">
           </a>
           <a href="#" class="icon-item">
             <span class="sr-text">Cloud</span>
-            <img src="images/icon-upload.svg" alt="upload on cloud">
+            <img class="icon-pic" src="images/icon-upload.svg" alt="upload on cloud">
           </a>
         </div>
       </div>
-      <div class="component__memory-storage">
+      <div class="component__column memory-storage">
         <div class="component__bubble"> 185 GB Left</div>
         <label for="disk-storage">You’ve used 815 GB of your storage</label>
         <meter id="disk-storage" value="815" min="0" max="1000">815 GB out of 1000 GB</meter>

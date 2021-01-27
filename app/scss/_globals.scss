@@ -1,9 +1,14 @@
+*{
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Raleway', sans-serif;
+    font-size: 0.9375rem;
     margin: 0;
     background-color: $veryDarkBlue;
     color: white;
+
 }
 
 main {
@@ -11,5 +16,26 @@ main {
     min-height: 667px;
     background-image: url("./../../images/bg-mobile.png");
     
+    @include breakpoint-up(large){
+        background-image: url("./../../images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        min-height: 800px;
+    }
 }
 
+
+.flex{
+    display: flex;
+}
+
+// only for screen readers
+.sr-text{
+position: absolute;
+color: transparent;
+background: transparent;
+border: 0px;
+height: 1px;
+width: 1px;
+overflow: hidden;
+}

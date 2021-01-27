@@ -1,5 +1,11 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 0.9375rem;
   margin: 0;
   background-color: #0c122c;
   color: white;
@@ -9,5 +15,83 @@ main {
   width: 100%;
   min-height: 667px;
   background-image: url("./../../images/bg-mobile.png");
+}
+
+@media (min-width: 64em) {
+  main {
+    background-image: url("./../../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 800px;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sr-text {
+  position: absolute;
+  color: transparent;
+  background: transparent;
+  border: 0px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.component {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 64em) {
+  .component {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.component__column {
+  background-color: #1d2c67;
+}
+
+.component .menu {
+  min-width: 20.375rem;
+  min-height: 12.5625rem;
+  border-radius: 10px 100px 10px 10px;
+  padding: 2.5rem 4rem 2.5rem 2.5rem;
+}
+
+.component .menu .icon-item {
+  background-color: #0c122c;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+}
+
+.component .menu .icon-item :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.component .menu .icon-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
