@@ -12,21 +12,29 @@ body{
 }
 
 main {
+    
     width: 100%;
     min-height: 667px;
     background-image: url("./../../images/bg-mobile.png");
+    position: relative;
+    padding: 1.5rem;
     
     @include breakpoint-up(large){
         background-image: url("./../../images/bg-desktop.png");
         background-repeat: no-repeat;
         background-position: bottom;
         min-height: 800px;
+        position: relative;
     }
 }
 
 
 .flex{
     display: flex;
+
+    &__column{
+        background-color: $darkBlue;
+    }
 }
 
 // only for screen readers

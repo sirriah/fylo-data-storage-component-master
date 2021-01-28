@@ -15,6 +15,8 @@ main {
   width: 100%;
   min-height: 667px;
   background-image: url("./../../images/bg-mobile.png");
+  position: relative;
+  padding: 1.5rem;
 }
 
 @media (min-width: 64em) {
@@ -23,6 +25,7 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     min-height: 800px;
+    position: relative;
   }
 }
 
@@ -30,6 +33,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex__column {
+  background-color: #1d2c67;
 }
 
 .sr-text {
@@ -52,6 +59,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: calc(100% - 3rem);
 }
 
 @media (min-width: 64em) {
@@ -60,21 +68,35 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: auto;
   }
 }
 
-.component__column {
-  background-color: #1d2c67;
+.component__logo {
+  margin-bottom: 2.0625rem;
 }
 
-.component .menu {
-  min-width: 20.375rem;
+.component__icons {
+  width: 11rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component__menu {
   min-height: 12.5625rem;
+  min-width: 100%;
   border-radius: 10px 100px 10px 10px;
   padding: 2.5rem 4rem 2.5rem 2.5rem;
 }
 
-.component .menu .icon-item {
+@media (min-width: 64em) {
+  .component__menu {
+    min-width: 21.875rem;
+  }
+}
+
+.component__menu .icon-item {
   background-color: #0c122c;
   width: 3rem;
   height: 3rem;
@@ -83,15 +105,103 @@ main {
   border-radius: 10px;
 }
 
-.component .menu .icon-item :not(:last-child) {
+.component__menu .icon-item :not(:last-child) {
   margin-right: 1rem;
 }
 
-.component .menu .icon-pic {
+.component__menu .icon-pic {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.component__memory-storage {
+  min-width: 100%;
+  padding: 2rem 2rem 3.25rem 2rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 64em) {
+  .component__memory-storage {
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    min-width: 33.75rem;
+    min-height: 9.625rem;
+  }
+}
+
+.component__bubble {
+  position: absolute;
+  background-color: white;
+  color: #848794;
+  font-weight: 700;
+  bottom: -2.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 11.1875rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.component__bubble span {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.component__label {
+  margin-bottom: 1rem;
+}
+
+.component__disk-storage {
+  display: block;
+  width: 100%;
+  /*
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
+  height: 0.875rem;
+  border: 3px solid #0c122c;
+  /* For Firefox */
+  background: #0c122c;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 10px;
+}
+
+.component__disk-storage:-webkit-meter-bar {
+  background: #0c122c;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 10px;
+}
+
+.component__disk-storage:-moz-meter-optimum::-moz-meter-bar {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 10px;
+}
+
+.component__disk-storage:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: antiquewhite;
+}
+
+.component__disk-storage:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: steelblue;
+}
+
+.component__range {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+meter[value="815"] > div {
+  background: red;
 }
 /*# sourceMappingURL=style.css.map */
