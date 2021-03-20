@@ -36,10 +36,15 @@
       </div>
       <div class="component__memory-storage flex__column">
         <div class="component__bubble"> 
-          <span>185</span>
-           GB Left</div>
-        <label class="component__label" for="disk-storage">You’ve used 815 GB of your storage</label>
-        <meter class="component__disk-storage" id="disk-storage" value="815" min="0" max="1000">815 GB out of 1000 GB</meter>
+          <span class="number">185</span>
+          <span class="units">GB Left</span></div>
+           
+        <label class="component__label" for="disk-storage">You’ve used <span class="memory">815 GB</span> of your storage</label>
+        <div class="component__disk-storage" id="disk-storage" value="815" min="0" max="1000" aria-label="meter of disk space">
+          <div class="used-space">
+            <div class="pointer"></div>
+          </div>
+        </div>
         <div class="component__range flex">
           <span class="value-min">0 GB</span>
           <span class="value-max">1000 GB</span>
