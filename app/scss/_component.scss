@@ -1,3 +1,8 @@
+/*
+CSS for component "Data storage"
+
+*/
+
 .component {
   flex-direction: column;
   position: absolute;
@@ -11,6 +16,8 @@
     align-items: flex-end;
     width: auto;
   }
+
+  // CSS for first part of component with icons
 
   &__logo {
     margin-bottom: 2.0625rem;
@@ -34,6 +41,7 @@
       margin-bottom: 0rem;
     }
 
+    // CSS for icons from first part of component
     .icon-item {
       background-color: $veryDarkBlue;
       width: 3rem;
@@ -41,9 +49,16 @@
       display: inline-block;
       position: relative;
       border-radius: 10px;
+      transition: all 200ms ease-in-out;
+      border: none;
 
       :not(:last-child) {
         margin-right: 1rem;
+      }
+
+      &:hover{
+        background-color: black;
+        transform: scale(1.15);
       }
     }
 
@@ -52,9 +67,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      
     }
   }
 
+  // CSS for second part of the component
   &__memory-storage {
     min-width: 100%;
     padding: 2rem 2rem 3.25rem 2rem;
@@ -69,6 +87,8 @@
       position: relative;
     }
   }
+
+  // CSS for white bubble with free space
 
   &__bubble {
     width: 11.1875rem;
@@ -106,7 +126,6 @@
       bottom: unset;
       left: unset;
       transform: translate(-2.5rem, -60%);
-      
 
       ::after {
         content: "";
@@ -137,7 +156,7 @@
       text-align: left;
     }
   }
-
+  // meter for the disk storage
   &__disk-storage {
     display: block;
     width: 100%;
@@ -170,6 +189,7 @@
     }
   }
 
+  // numbers under the meter
   &__range {
     justify-content: space-between;
     font-size: 0.75rem;
