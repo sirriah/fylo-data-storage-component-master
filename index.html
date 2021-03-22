@@ -18,6 +18,7 @@
     <h1 class="sr-text">Fylo Data Storage Component</h1>
     <div class="component flex">
       <section class="component__menu flex__column">
+        <h2 class="sr-text">Menu</h2>
         <img class="component__logo" src="images/logo.svg" alt="Fylo logo">
         <div class="component__icons flex">
           <button class="icon-item" title="New document">
@@ -35,12 +36,13 @@
         </div>
       </section>
       <section class="component__memory-storage flex__column">
+        <h2 class="sr-text">Disk space</h2>
         <div class="component__bubble"> 
           <span class="number">185</span>
           <span class="units">GB Left</span></div>
            
-        <label class="component__label" for="disk-storage">You’ve used <span class="memory">815 GB</span> of your storage</label>
-        <div class="component__disk-storage" id="disk-storage" aria-label="meter of disk space">
+        <label class="component__label">You’ve used <span class="memory">815 GB</span> of your storage</label>
+        <div class="component__disk-storage" aria-label="meter of disk space">
           <div class="used-space">
             <div class="pointer"></div>
           </div>
