@@ -17,5 +17,5 @@ How can I improve my Sass or accessibility?
 
 See my [profile](https://www.frontendmentor.io/profile/sirriah) on Frontend Mentor.
 
-Happy coding.
+Happy coding 👋👩‍🦰
 
